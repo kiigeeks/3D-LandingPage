@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>3D Course - Marzuki</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    </head>
+
+    <body >
+        <!-- header -->
+        <header>
+            <div class="navbar-container" id="nav-head">
+                <div class="navbar-wrapper">
+                    <div class="navbar-title">
+                        <a href="#home" class="brand">DeaCourse 3D</a> 
+                    </div>
+                    <div class="navbar-menu">
+                        <div class="hamburger">
+                            <input type="checkbox">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <nav id="nav-menu" class="nav-menu">
+                            <ul class="navigation">
+                                <li onclick="cek()"><a href="#home"> Home</a></li>
+                                <li onclick="cek()"><a href="#wrapper"> Latest</a></li>
+                                <li onclick="cek()"><a href="#top"> Best Seller</a></li>
+                                <li onclick="cek()"><a href="#product"> Product</a></li>
+                                <li onclick="cek()"><a href="#contact"> Find Us</a></li>
+                                <li onclick="cek()"><a href="#contact"> Source Code</a></li>
+                                <li onclick="cek()" class="group liHamburger animate__animated animate__rotateIn animate__fast animate__infinite">
+                                    <img id="darkLight" src="assets/moon.png" alt="Dark Mode">
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="navbar-darkmod  animate__animated animate__rotateIn animate__slow animate__infinite">
+                        <img id="darkLight2" src="assets/moon.png" alt="Dark Mode">
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="container">
+            <!-- hero section -->
+            <div class="container-header" id="home">
+                <div class="welcome">
+                    <h2>WELCOME TO SEPATUKU.</h2> 
+                    <p>Hi Everyone 👋, <span id="message"></span></p>
+                    <a href="#wrapper" class="btn-head">News Style</a>
+                </div>
+        
+                <div class="cta">
+                    <model-viewer src="assets/scene.gltf" camera-controls camera-orbit="45deg 50deg" disable-zoom auto-rotate shadow-intensity="1"></model-viewer>
+                </div>
+            </div>
+
+            <!-- singe product -->
+            <div class="single-item" id="newBox">
+                <div class="single-item-wrapper" id="productBox">
+                    <div class="single-item-row">
+                        <div class="single-item-detail"> 
+                            <h3 id="titleBox"></h3>
+                            <p id="descBox"></p>
+                            <a onclick="setNormal()" class="btn-foot">More Style</a>
+                        </div>
+                        <img id="imgBox" class="animate__animated animate__pulse animate__slow animate__infinite">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- latest product -->
+            <div class="wrapper" id="wrapper">
+                <div class="card animate__animated animate__fadeInUp">
+                    <div class="product" onclick="getDetail(1)" id="product1">
+                        <img src="assets/nike1.png" alt="Nike 1" class="animate__animated animate__pulse animate__slow animate__infinite">
+                    </div>
+                    <div class="detail">
+                        <div class="title" id="title1">
+                            Nike Sports Purple
+                        </div>
+                        <div class="desc" id="desc1">
+                            Custom Best Training Shoes with Purple Blue Color
+                        </div>
+                    </div>
+                </div>
+                <div class="card animate__animated animate__fadeInUp">
+                    <div class="product" onclick="getDetail(2)"  id="product2">
+                        <img src="assets/nike2.png" alt="Nike 2" class="animate__animated animate__pulse animate__slow animate__infinite">
+                    </div>
+                    <div class="detail">
+                        <div class="title" id="title2">
+                            Nike Red Black
+                        </div>
+                        <div class="desc" id="desc2">
+                            Men's Easy On/Off Road Running Shoes with Red and Black Color 
+                        </div>
+                    </div>
+                </div>
+                <div class="card animate__animated animate__fadeInUp">
+                    <div class="product" onclick="getDetail(3)" id="product3">
+                        <img src="assets/nike3.png" alt="Nike 3" class="animate__animated animate__pulse animate__slow animate__infinite">
+                    </div>
+                    <div class="detail">
+                        <div class="title" id="title3">
+                            Nike Blue Orange
+                        </div>
+                        <div class="desc" id="desc3">
+                            New Design Indoor Cycling Shoes with Blue and Orange Color
+                        </div>
+                    </div>
+                </div>
+                <div class="card animate__animated animate__fadeInUp">
+                    <div class="product" onclick="getDetail(4)" id="product4">
+                        <img src="assets/nike4.png" alt="Nike 4" class="animate__animated animate__pulse animate__slow animate__infinite">
+                    </div>
+                    <div class="detail">
+                        <div class="title" id="title4">
+                            Nike Green
+                        </div>
+                        <div class="desc" id="desc4">
+                            Beatiful Modern Road Running Shoes with Green Color
+                        </div>
+                    </div>
+                </div>
+                <div class="card animate__animated animate__fadeInUp">
+                    <div class="product" onclick="getDetail(5)" id="product5">
+                        <img src="assets/nike5.png" alt="Nike 5" class="animate__animated animate__pulse animate__slow animate__infinite">
+                    </div>
+                    <div class="detail">
+                        <div class="title" id="title5">
+                            Nike Blue
+                        </div>
+                        <div class="desc" id="desc5">
+                            Next Nature Shoes with Blue and White Color
+                        </div>
+                    </div>
+                </div>
+                <div class="card animate__animated animate__fadeInUp">
+                    <div class="product" onclick="getDetail(6)" id="product6">
+                        <img src="assets/nike6.png" alt="Nike 6" class="animate__animated animate__pulse animate__slow animate__infinite">
+                    </div>
+                    <div class="detail">
+                        <div class="title" id="title6">
+                            Nike Sports Tosca
+                        </div>
+                        <div class="desc" id="desc6">
+                            Men's Firm Ground Football Boot with Tosca Color
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- top product -->
+            <div class="top-item" id="top">
+                <div class="top-item-wrapper">
+                    <div class="top-item-row">
+                        <img src="assets/nike1.png" alt="Nike 1" class="top-product animate__animated animate__pulse animate__slow animate__infinite">
+                        <div class="top-item-detail"> 
+                            <h3>Nike Sports Purple</h3>
+                            <p>Custom Best Training Shoes with Purple Blue Color</p>
+                            <a href="#wrapper" class="btn-foot">Choose Yours</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- more product -->
+            <div class="more-item" id="product">
+                <div class="more-item-wrapper">
+                    <div class="more-item-row">
+                        <div class="more-item-tag">Nike Air Max TW</div>
+                        <div class="more-item-title"><h2>UNCOVER THE NEXT</h2></div>
+                        <div class="more-item-sub">Let your style do talking.</div>
+                        <div class="more-item-p">Featuring an unmissable wavy design and street ready cushioning</div>
+                        <a href="#wrapper" class="btn-more">Shop</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- contact us -->
+            <div class="contact-item" id="contact">
+                <div class="contact-item-wrapper">
+                    <div class="contact-item-row">
+                        <div class="contact-item-title"><h1>FIND US</h1></div>
+                        <div class="contact-item-sub">Need Something? Come to us 😊</div>
+                        <div class="contact-item-peta">
+                            <iframe src="https://www.google.com/maps/d/embed?mid=1BSGzDjgJnTQkkOF7HI6JiqA4s4k&hl=en_US&ehbc=2E312F"
+                                        width="100%" height="700" frameborder="0" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- footer -->
+            <div class="footer-item">
+                <div class="footer-item-wrapper">
+                    <div class="footer-item-row">
+                        <div class="footer-item-icon">
+                            <a href="https://twitter.com/Nike" target="_blank" class="icon-foot">
+                                <?xml version="1.0" ?><svg height="60px" version="1.1" viewBox="0 0 60 60" width="60px" xmlns="http://www.w3.org/2000/svg" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" xmlns:xlink="http://www.w3.org/1999/xlink"><title/><desc/><defs/><g fill="none" fill-rule="evenodd" id="black" stroke="none" stroke-width="1"><g id="slice"/><g fill="#000000" id="twitter" transform="translate(13.000000, 16.000000)"><path d="M28.0521385,2.43669427 C26.8431846,1.0622015 25.1205385,0.186464105 23.2140615,0.154731028 C19.5536,0.0938030905 16.5856538,3.18692339 16.5856538,7.06311604 C16.5856538,7.61324118 16.6442923,8.14969337 16.7573692,8.66467316 C11.2485846,8.30735257 6.36446923,5.43877059 3.09541538,1.1147218 C2.52486154,2.1508617 2.19790769,3.36188271 2.19790769,4.65915037 C2.19790769,7.11498844 3.36809231,9.29452724 5.14663077,10.5814174 C4.06012308,10.5334499 3.03806923,10.2045378 2.14443846,9.66495203 C2.14379231,9.69444497 2.14379231,9.72394494 2.14379231,9.75396245 C2.14379231,13.1835497 4.42859231,16.0607076 7.46083077,16.7309383 C6.90465385,16.888538 6.31907692,16.9710163 5.7146,16.967008 C5.28749231,16.9641758 4.87217692,16.9168118 4.46752308,16.831768 C5.31091538,19.6443777 7.75870769,21.6967663 10.6592923,21.764628 C8.39080769,23.6476963 5.53286923,24.7691933 2.42729231,24.762787 C1.89227692,24.7616833 1.36469231,24.727112 0.846153846,24.6605996 C3.77953077,26.6733139 7.26359231,27.8451711 11.0067615,27.8461531 C23.1985538,27.8493518 29.8657308,17.2395109 29.8657308,8.03676868 C29.8657308,7.73483632 29.8591077,7.43451912 29.8465077,7.13565195 C31.1415615,6.17066645 32.2652231,4.96078915 33.1538462,3.57921901 C31.9652462,4.11501615 30.6876385,4.47086863 29.3470308,4.62013789 C30.7154231,3.77796518 31.7665538,2.43009607 32.2613462,0.813758404 C30.9805077,1.59049229 29.5620385,2.14751286 28.0521385,2.43669427 Z"/></g></g></svg>
+                            </a>
+                            <a href="https://www.youtube.com/user/nike" target="_blank" class="icon-foot">
+                                <?xml version="1.0" ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg enable-background="new 0 0 24 24" height="24px" id="Layer_1" version="1.1" viewBox="0 0 24 24" width="24px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><path d="M23.3,7.3c0-0.2-0.3-1.8-1-2.5c-0.9-1-1.9-1.1-2.4-1.1l-0.1,0c-3.1-0.2-7.7-0.2-7.8-0.2c0,0-4.7,0-7.8,0.2l-0.1,0   c-0.5,0-1.5,0.1-2.4,1.1c-0.7,0.8-1,2.4-1,2.6c0,0.1-0.2,1.9-0.2,3.8v1.7c0,1.9,0.2,3.7,0.2,3.8c0,0.2,0.3,1.8,1,2.5   c0.8,0.9,1.8,1,2.4,1.1c0.1,0,0.2,0,0.3,0c1.8,0.2,7.3,0.2,7.5,0.2c0,0,0,0,0,0c0,0,4.7,0,7.8-0.2l0.1,0c0.5-0.1,1.5-0.2,2.4-1.1   c0.7-0.8,1-2.4,1-2.6c0-0.1,0.2-1.9,0.2-3.8v-1.7C23.5,9.3,23.3,7.4,23.3,7.3z M15.9,12.2l-6,3.2c-0.1,0-0.1,0.1-0.2,0.1   c-0.1,0-0.2,0-0.2-0.1c-0.1-0.1-0.2-0.2-0.2-0.4l0-6.5c0-0.2,0.1-0.3,0.2-0.4S9.8,8,10,8.1l6,3.2c0.2,0.1,0.3,0.2,0.3,0.4   S16.1,12.1,15.9,12.2z"/></g></svg>
+                            </a>
+                            <a href="https://www.instagram.com/nike/" target="_blank" class="icon-foot">
+                                <?xml version="1.0" ?><svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><title/><g id="Instagram"><path d="M20,10.16c3.2,0,3.58,0,4.85.07a6.67,6.67,0,0,1,2.23.42,3.89,3.89,0,0,1,2.27,2.27,6.67,6.67,0,0,1,.42,2.23c.06,1.27.07,1.65.07,4.85s0,3.58-.07,4.85a6.67,6.67,0,0,1-.42,2.23,3.89,3.89,0,0,1-2.27,2.27,6.67,6.67,0,0,1-2.23.42c-1.27.06-1.65.07-4.85.07s-3.58,0-4.85-.07a6.67,6.67,0,0,1-2.23-.42,3.89,3.89,0,0,1-2.27-2.27,6.67,6.67,0,0,1-.42-2.23c-.06-1.27-.07-1.65-.07-4.85s0-3.58.07-4.85a6.67,6.67,0,0,1,.42-2.23,3.89,3.89,0,0,1,2.27-2.27,6.67,6.67,0,0,1,2.23-.42c1.27-.06,1.65-.07,4.85-.07M20,8c-3.26,0-3.67,0-4.95.07a8.76,8.76,0,0,0-2.91.56,6.07,6.07,0,0,0-3.51,3.51,8.76,8.76,0,0,0-.56,2.91C8,16.33,8,16.74,8,20s0,3.67.07,4.95a8.76,8.76,0,0,0,.56,2.91,6.07,6.07,0,0,0,3.51,3.51,8.76,8.76,0,0,0,2.91.56C16.33,32,16.74,32,20,32s3.67,0,4.95-.07a8.76,8.76,0,0,0,2.91-.56,6.07,6.07,0,0,0,3.51-3.51A8.76,8.76,0,0,0,31.93,25C32,23.67,32,23.26,32,20s0-3.67-.07-4.95a8.76,8.76,0,0,0-.56-2.91,6.07,6.07,0,0,0-3.51-3.51A8.76,8.76,0,0,0,25,8.07C23.67,8,23.26,8,20,8Zm0,5.84A6.16,6.16,0,1,0,26.16,20,6.16,6.16,0,0,0,20,13.84ZM20,24a4,4,0,1,1,4-4A4,4,0,0,1,20,24Zm6.41-11.85a1.44,1.44,0,1,0,1.44,1.44A1.44,1.44,0,0,0,26.41,12.15Z"/></g></svg>
+                            </a>
+                            <a href="https://www.facebook.com/nike" target="_blank" class="icon-foot">
+                                <?xml version="1.0" ?><svg baseProfile="tiny" height="24px" id="Layer_1" version="1.2" viewBox="0 0 24 24" width="24px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><path d="M13,10h3v3h-3v7h-3v-7H7v-3h3V8.745c0-1.189,0.374-2.691,1.118-3.512C11.862,4.41,12.791,4,13.904,4H16v3h-2.1   C13.402,7,13,7.402,13,7.899V10z"/></g></svg>
+                            </a>    
+                        </div>
+                        <div class="footer-item-sub">© 2022 Nike, Inc. All Rights Reserved</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- back to top -->
+        <a href="#home" id="to-top" class="to-top animate__animated animate__pulse animate__slow animate__infinite">
+            <img src="assets/top.png" alt="">
+        </a>
+
+        <script src="tweak.js"></script>
+        <script src="autotyping.js"></script>
+        <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+    </body>
+</html>
